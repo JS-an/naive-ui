@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2.33.6
+
+### Feats
+
+- `n-data-table` 新增 `summaryHeader` 实现固定在表头的总结栏，关闭 [#2814](https://github.com/tusen-ai/naive-ui/issues/2814)
+
 ## 2.33.5
 
 ### Fixes

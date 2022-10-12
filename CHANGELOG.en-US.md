@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2.33.6
+
+### Feats
+
+- `n-data-table` adds `summaryHeader` Add fixed summary column in table header, closes [#2814](https://github.com/tusen-ai/naive-ui/issues/2814)
+
 ## 2.33.5
 
 ### Fixes
