@@ -750,6 +750,19 @@ export function createComponentMenuOptions ({ lang, theme, mode }) {
           path: '/legacy-transfer'
         }
       ]
+    }),
+    appendCounts({
+      zh: 'Plus组件',
+      en: 'Plus Components',
+      type: 'group',
+      children: [
+        {
+          en: 'Data Table Plus',
+          zh: '数据表格Plus',
+          enSuffix: true,
+          path: '/data-table-plus'
+        }
+      ]
     })
   ])
 }
