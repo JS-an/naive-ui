@@ -32,7 +32,7 @@ const appendCounts = (item) => {
   }
 }
 
-function createItems (lang, theme, prefix, items) {
+function createItems(lang, theme, prefix, items) {
   const isZh = lang === 'zh-CN'
   const langKey = isZh ? 'zh' : 'en'
   return items.map((rawItem) => {
@@ -52,7 +52,7 @@ function createItems (lang, theme, prefix, items) {
   })
 }
 
-export function createDocumentationMenuOptions ({ lang, theme, mode }) {
+export function createDocumentationMenuOptions({ lang, theme, mode }) {
   return createItems(lang, theme, '/docs', [
     {
       en: 'Introduction',
@@ -170,7 +170,7 @@ export function createDocumentationMenuOptions ({ lang, theme, mode }) {
   ])
 }
 
-export function createComponentMenuOptions ({ lang, theme, mode }) {
+export function createComponentMenuOptions({ lang, theme, mode }) {
   return createItems(lang, theme, '/components', [
     appendCounts({
       zh: '通用组件',
@@ -761,6 +761,12 @@ export function createComponentMenuOptions ({ lang, theme, mode }) {
           zh: '数据表格Plus',
           enSuffix: true,
           path: '/data-table-plus'
+        },
+        {
+          en: 'Form Plus',
+          zh: '表单 Plus',
+          enSuffix: true,
+          path: '/form-plus'
         }
       ]
     })

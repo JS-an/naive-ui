@@ -921,6 +921,11 @@ export const zhComponentRoutes = [
     path: 'data-table-plus',
     component: () =>
       import('../../src/data-table-plus/demos/zhCN/index.demo-entry.md')
+  },
+  {
+    path: 'form-plus',
+    component: () =>
+      import('../../src/form-plus/demos/zhCN/index.demo-entry.md')
   }
 ]
 
