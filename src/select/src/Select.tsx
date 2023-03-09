@@ -97,6 +97,10 @@ export const selectProps = {
     type: [String, Number, Array] as PropType<Value | null>,
     default: null
   },
+  keyboard: {
+    type: Boolean,
+    default: true
+  },
   value: [String, Number, Array] as PropType<Value | null>,
   placeholder: String,
   menuProps: Object as PropType<HTMLAttributes>,
@@ -164,6 +168,7 @@ export const selectProps = {
   inputProps: Object as PropType<InputHTMLAttributes>,
   nodeProps: Function as PropType<NodeProps>,
   ignoreComposition: { type: Boolean, default: true },
+  showOnFocus: Boolean,
   // for jsx
   onUpdateValue: [Function, Array] as PropType<
   MaybeArray<OnUpdateValue> | undefined
@@ -420,10 +425,13 @@ export default defineComponent({
       if (onClear) call(onClear)
     }
     function doFocus (e: FocusEvent): void {
-      const { onFocus } = props
+      const { onFocus, showOnFocus } = props
       const { nTriggerFormFocus } = formItem
       if (onFocus) call(onFocus, e)
       nTriggerFormFocus()
+      if (showOnFocus) {
+        openMenu()
+      }
     }
     function doSearch (value: string): void {
       const { onSearch } = props
@@ -701,6 +709,10 @@ export default defineComponent({
     // keyboard events
     // also for menu keydown
     function handleKeydown (e: KeyboardEvent): void {
+      if (!props.keyboard) {
+        e.preventDefault()
+        return
+      }
       switch (e.key) {
         case ' ':
           if (props.filterable) break
