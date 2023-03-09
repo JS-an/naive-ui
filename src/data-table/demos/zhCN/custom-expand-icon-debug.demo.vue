@@ -13,8 +13,8 @@
 
 <script lang="ts">
 import { h, defineComponent } from 'vue'
-import type { DataTableColumns } from 'naive-ui'
-import { NIcon } from 'naive-ui'
+import type { DataTableColumns } from '/src/index.ts'
+import { NIcon } from '/src/index.ts'
 import { ArrowForward } from '@vicons/ionicons5'
 
 type RowData = {
@@ -63,7 +63,7 @@ const columns: DataTableColumns<RowData> = [
 ]
 
 export default defineComponent({
-  setup () {
+  setup() {
     return {
       data: createData(),
       columns,

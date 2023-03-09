@@ -4,21 +4,11 @@
 
 <template>
   <n-space>
-    <n-button @click="info">
-      Info(Hover will keep alive)
-    </n-button>
-    <n-button @click="error">
-      Error
-    </n-button>
-    <n-button @click="warning">
-      Warning
-    </n-button>
-    <n-button @click="success">
-      Success
-    </n-button>
-    <n-button @click="loading">
-      Loading
-    </n-button>
+    <n-button @click="info"> Info(Hover will keep alive) </n-button>
+    <n-button @click="error"> Error </n-button>
+    <n-button @click="warning"> Warning </n-button>
+    <n-button @click="success"> Success </n-button>
+    <n-button @click="loading"> Loading </n-button>
   </n-space>
 </template>
 
@@ -27,10 +17,10 @@ import { defineComponent } from 'vue'
 import { useMessage } from 'naive-ui'
 
 export default defineComponent({
-  setup () {
+  setup() {
     const message = useMessage()
     return {
-      info () {
+      info() {
         message.info(
           "I don't know why nobody told you how to unfold your love",
           {
@@ -38,18 +28,18 @@ export default defineComponent({
           }
         )
       },
-      error () {
+      error() {
         message.error('Once upon a time you dressed so fine')
       },
-      warning () {
+      warning() {
         message.warning('How many roads must a man walk down')
       },
-      success () {
+      success() {
         message.success(
           "'Cause you walked hand in hand With another man in my place"
         )
       },
-      loading () {
+      loading() {
         message.loading(
           'If I were you, I will realize that I love you more than any other guy'
         )

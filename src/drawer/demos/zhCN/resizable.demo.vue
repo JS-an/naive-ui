@@ -6,18 +6,10 @@
 
 <template>
   <n-button-group>
-    <n-button @click="activate('top')">
-      上
-    </n-button>
-    <n-button @click="activate('right')">
-      右
-    </n-button>
-    <n-button @click="activate('bottom')">
-      下
-    </n-button>
-    <n-button @click="activate('left')">
-      左
-    </n-button>
+    <n-button @click="activate('top')"> 上 </n-button>
+    <n-button @click="activate('right')"> 右 </n-button>
+    <n-button @click="activate('bottom')"> 下 </n-button>
+    <n-button @click="activate('left')"> 左 </n-button>
   </n-button-group>
   <n-drawer
     v-model:show="active"
@@ -36,7 +28,7 @@ import { defineComponent, ref } from 'vue'
 import type { DrawerPlacement } from 'naive-ui'
 
 export default defineComponent({
-  setup () {
+  setup() {
     const activeRef = ref(false)
     const placementRef = ref<DrawerPlacement>('right')
     const activate = (place: DrawerPlacement) => {

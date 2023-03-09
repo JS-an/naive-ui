@@ -3,9 +3,7 @@
 </markdown>
 
 <template>
-  <n-button @click="modalActive = !modalActive">
-    Toggle
-  </n-button>
+  <n-button @click="modalActive = !modalActive"> Toggle </n-button>
   <n-drawer v-model:show="modalActive" width="800">
     <n-data-table
       ref="table"
@@ -20,7 +18,7 @@
 
 <script lang="ts">
 import { defineComponent, h } from 'vue'
-import type { DataTableColumns } from 'naive-ui'
+import type { DataTableColumns } from '/src/index.ts'
 
 const columns: DataTableColumns = [
   {
@@ -56,21 +54,21 @@ const columns: DataTableColumns = [
   {
     title: 'Row',
     key: 'row',
-    render (row, index) {
+    render(row, index) {
       return h('span', ['row ', index])
     }
   },
   {
     title: 'Row1',
     key: 'row1',
-    render (row, index) {
+    render(row, index) {
       return h('span', ['row ', index])
     }
   },
   {
     title: 'Row2',
     key: 'row2',
-    render (row, index) {
+    render(row, index) {
       return h('span', ['row ', index])
     }
   },
@@ -90,7 +88,7 @@ const data = Array.from({ length: 46 }).map((_, index) => ({
 }))
 
 export default defineComponent({
-  data () {
+  data() {
     return {
       modalActive: false,
       data,
@@ -98,7 +96,7 @@ export default defineComponent({
     }
   },
   computed: {
-    pagination () {
+    pagination() {
       return { pageSize: 10 }
     }
   }

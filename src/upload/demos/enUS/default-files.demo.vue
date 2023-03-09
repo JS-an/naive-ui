@@ -13,10 +13,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import type { UploadFileInfo } from 'naive-ui'
+import type { UploadFileInfo } from '/src/index.ts'
 
 export default defineComponent({
-  setup () {
+  setup() {
     const defaultFileList: UploadFileInfo[] = [
       {
         id: 'the',

@@ -13,7 +13,7 @@ Set colspan and rowspan by setting `colSpan` and `rowSpan` of column object. Set
 
 ```js
 import { h, defineComponent } from 'vue'
-import { NTag, NButton, useMessage } from 'naive-ui'
+import { NTag, NButton, useMessage } from '/src/index.ts'
 
 const createColumns = ({ sendMail }) => {
   return [

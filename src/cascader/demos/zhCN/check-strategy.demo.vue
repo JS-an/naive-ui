@@ -7,15 +7,9 @@
 <template>
   <n-space vertical>
     <n-radio-group v-model:value="checkStrategy">
-      <n-radio-button value="all">
-        All
-      </n-radio-button>
-      <n-radio-button value="parent">
-        Parent
-      </n-radio-button>
-      <n-radio-button value="child">
-        Child
-      </n-radio-button>
+      <n-radio-button value="all"> All </n-radio-button>
+      <n-radio-button value="parent"> Parent </n-radio-button>
+      <n-radio-button value="child"> Child </n-radio-button>
     </n-radio-group>
     <n-cascader
       multiple
@@ -32,7 +26,7 @@
 import { defineComponent, ref } from 'vue'
 import { CascaderOption } from 'naive-ui'
 
-function getOptions (depth = 4, iterator = 1, prefix = '') {
+function getOptions(depth = 4, iterator = 1, prefix = '') {
   const length = 3
   const options: CascaderOption[] = []
   for (let i = 1; i <= length; ++i) {
@@ -62,7 +56,7 @@ function getOptions (depth = 4, iterator = 1, prefix = '') {
 }
 
 export default defineComponent({
-  setup () {
+  setup() {
     return {
       checkStrategy: ref<'all' | 'child' | 'parent'>('all'),
       options: getOptions(),

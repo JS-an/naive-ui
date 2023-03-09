@@ -35,7 +35,7 @@ const data = [
 ]
 
 export default defineComponent({
-  setup () {
+  setup() {
     const renderExpandIcon = () => {
       return h(NIcon, null, { default: () => h(PawOutline) })
     }

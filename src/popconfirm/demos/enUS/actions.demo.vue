@@ -39,9 +39,7 @@
       <template #trigger>
         <n-button>Custom action</n-button>
       </template>
-      <template #action>
-        Custom Action
-      </template>
+      <template #action> Custom Action </template>
       Things pass us by. Nobody can catch them. That's the way we live our
       lives.
     </n-popconfirm>
@@ -53,13 +51,13 @@ import { defineComponent } from 'vue'
 import { useMessage } from 'naive-ui'
 
 export default defineComponent({
-  setup () {
+  setup() {
     const message = useMessage()
     return {
-      handlePositiveClick () {
+      handlePositiveClick() {
         message.info('Yes')
       },
-      handleNegativeClick () {
+      handleNegativeClick() {
         message.info('No')
       }
     }

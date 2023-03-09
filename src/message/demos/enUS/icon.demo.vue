@@ -3,9 +3,7 @@
 </markdown>
 
 <template>
-  <n-button @click="createMessage">
-    Hourglass Icon
-  </n-button>
+  <n-button @click="createMessage"> Hourglass Icon </n-button>
 </template>
 
 <script lang="ts">
@@ -14,10 +12,10 @@ import { NIcon, useMessage } from 'naive-ui'
 import { MdHourglass } from '@vicons/ionicons4'
 
 export default defineComponent({
-  setup () {
+  setup() {
     const message = useMessage()
     return {
-      createMessage () {
+      createMessage() {
         message.warning("I never needed anybody's help in any way", {
           icon: () => h(NIcon, null, { default: () => h(MdHourglass) })
         })

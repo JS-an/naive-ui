@@ -6,7 +6,7 @@
 
 ```js
 import { defineComponent, h } from 'vue'
-import { NTooltip, NGradientText } from 'naive-ui'
+import { NTooltip, NGradientText } from '/src/index.ts'
 
 const renderTooltip = (trigger, content) => {
   return h(NTooltip, null, {

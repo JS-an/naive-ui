@@ -14,7 +14,7 @@ Not too simple, but good-looking.
 
 ```js
 import { h, defineComponent, ref, nextTick } from 'vue'
-import { NInput } from 'naive-ui'
+import { NInput } from '/src/index.ts'
 
 const createData = () => [
   {

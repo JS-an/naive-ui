@@ -5,9 +5,7 @@ Some users said that they want to use alert as message.
 </markdown>
 
 <template>
-  <n-button @click="handleClick">
-    Lpsum
-  </n-button>
+  <n-button @click="handleClick"> Lpsum </n-button>
 </template>
 
 <script lang="ts">
@@ -37,9 +35,9 @@ const renderMessage: MessageRenderMessage = (props) => {
 }
 
 export default defineComponent({
-  setup () {
+  setup() {
     const { error } = useMessage()
-    function handleClick () {
+    function handleClick() {
       error('Lorem ipsum dolor sit amet, consectetur adipiscing elit', {
         render: renderMessage,
         closable: true

@@ -6,9 +6,7 @@
 
 <template>
   <n-cascader v-model:value="value" placeholder="没啥用的值" :options="options">
-    <template #action>
-      站在能分割世界的桥
-    </template>
+    <template #action> 站在能分割世界的桥 </template>
     <template #arrow>
       <flash16-regular />
     </template>
@@ -20,7 +18,7 @@ import { defineComponent, ref } from 'vue'
 import { CascaderOption } from 'naive-ui'
 import Flash16Regular from '@vicons/fluent/Flash16Regular'
 
-function getOptions (depth = 2, iterator = 1, prefix = '') {
+function getOptions(depth = 2, iterator = 1, prefix = '') {
   const length = 12
   const options: CascaderOption[] = []
   for (let i = 1; i <= length; ++i) {
@@ -53,7 +51,7 @@ export default defineComponent({
   components: {
     Flash16Regular
   },
-  setup () {
+  setup() {
     return {
       value: ref(null),
       options: getOptions()
