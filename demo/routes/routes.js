@@ -539,6 +539,26 @@ export const enComponentRoutes = [
     path: 'data-table-plus',
     component: () =>
       import('../../src/data-table-plus/demos/enUS/index.demo-entry.md')
+  },
+  {
+    path: 'form-plus',
+    component: () =>
+      import('../../src/form-plus/demos/enUS/index.demo-entry.md')
+  },
+  {
+    path: 'data-table-view-plus',
+    component: () =>
+      import('../../src/data-table-view-plus/demos/enUS/index.demo-entry.md')
+  },
+  {
+    path: 'form-search-plus',
+    component: () =>
+      import('../../src/form-search-plus/demos/enUS/index.demo-entry.md')
+  },
+  {
+    path: 'ellipsis-plus',
+    component: () =>
+      import('../../src/ellipsis-plus/demos/enUS/index.demo-entry.md')
   }
 ]
 
@@ -926,6 +946,21 @@ export const zhComponentRoutes = [
     path: 'form-plus',
     component: () =>
       import('../../src/form-plus/demos/zhCN/index.demo-entry.md')
+  },
+  {
+    path: 'data-table-view-plus',
+    component: () =>
+      import('../../src/data-table-view-plus/demos/zhCN/index.demo-entry.md')
+  },
+  {
+    path: 'form-search-plus',
+    component: () =>
+      import('../../src/form-search-plus/demos/zhCN/index.demo-entry.md')
+  },
+  {
+    path: 'ellipsis-plus',
+    component: () =>
+      import('../../src/ellipsis-plus/demos/zhCN/index.demo-entry.md')
   }
 ]
 

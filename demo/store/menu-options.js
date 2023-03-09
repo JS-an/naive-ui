@@ -173,6 +173,43 @@ export function createDocumentationMenuOptions({ lang, theme, mode }) {
 export function createComponentMenuOptions({ lang, theme, mode }) {
   return createItems(lang, theme, '/components', [
     appendCounts({
+      zh: 'Plus组件',
+      en: 'Plus Components',
+      type: 'group',
+      children: [
+        {
+          en: 'Data Table Plus',
+          zh: '表格Plus',
+          enSuffix: true,
+          path: '/data-table-plus'
+        },
+        {
+          en: 'Form Plus',
+          zh: '表单Plus',
+          enSuffix: true,
+          path: '/form-plus'
+        },
+        {
+          en: 'Data Table View Plus',
+          zh: '展示表格Plus',
+          enSuffix: true,
+          path: '/data-table-view-plus'
+        },
+        {
+          en: 'Form Search Plus',
+          zh: '查询表单Plus',
+          enSuffix: true,
+          path: '/form-search-plus'
+        },
+        {
+          en: 'Ellipsis Plus',
+          zh: '文本省略Plus',
+          enSuffix: true,
+          path: '/ellipsis-plus'
+        }
+      ]
+    }),
+    appendCounts({
       zh: '通用组件',
       en: 'Common Components',
       type: 'group',
@@ -751,24 +788,5 @@ export function createComponentMenuOptions({ lang, theme, mode }) {
         }
       ]
     }),
-    appendCounts({
-      zh: 'Plus组件',
-      en: 'Plus Components',
-      type: 'group',
-      children: [
-        {
-          en: 'Data Table Plus',
-          zh: '数据表格Plus',
-          enSuffix: true,
-          path: '/data-table-plus'
-        },
-        {
-          en: 'Form Plus',
-          zh: '表单 Plus',
-          enSuffix: true,
-          path: '/form-plus'
-        }
-      ]
-    })
   ])
 }
