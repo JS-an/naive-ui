@@ -145,6 +145,7 @@
 | --- | --- | --- | --- | --- |
 | cardProps | `object` | `{}` | 表格卡片的配置，参考 <n-a href="card#API">Card Props</n-a> |  |
 | tableTitle | `string` | `表格` | 表格标题(不显示可传空) |  |
+| clearFilter | `boolean` | `false` | 查询后/数据修改后是否清空右上筛选值 |  |
 | showSummary | `boolean` | `false` | 是否展示合计行 | 未完成 |
 | excelTitle | `string` | `excel` | 导出的 excel 标题 |  |
 | exportOptions | `Array<object>` | `[{ label: "导出Excel", key: "excel" }]` | 导出按钮设置(不显示可传空) |  |
