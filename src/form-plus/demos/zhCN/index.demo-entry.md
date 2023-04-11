@@ -10,7 +10,9 @@ Form Plus 拥有 Form 的 Props，请参考<n-a href="form#API">Form</n-a>。
 
 ```html
 <div v-cloak id="nPlus">
-  <n-form-plus :model="model" :form-items="formItems" @@plus:submit="submit"></n-form-plus>
+  <n-form-plus :model="model" :form-items="formItems" @@plus:submit="submit">
+    <template #slot>我是插槽</template>
+  </n-form-plus>
 </div>
 
 <script type="module">
@@ -37,6 +39,7 @@ Form Plus 拥有 Form 的 Props，请参考<n-a href="form#API">Form</n-a>。
             type: 'datePicker', // 渲染类型
             rule: [ { required: true, type: 'number', message: '请输入date', trigger: ['blur', 'change'] } ]
           },
+          slot: { label: '插槽', type: 'slot', props: { name: 'slot' } },
           select: { label: '选择框', type: 'select', props: { options: [{ label: '选项1', value: 1 }] } },
           number: { label: '数字', type: 'inputNumber' },
           radio: { label: '单选', type: 'radio', props: { options: [ { label: '单选1', value: 1 } ] } },

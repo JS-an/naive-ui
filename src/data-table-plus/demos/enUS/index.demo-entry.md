@@ -156,12 +156,18 @@
 
 ### DataTablePlusColumn Properties
 
+<n-alert type="warning" title="注意" style="margin-bottom: 16px;" :bordered="false">
+  除了<n-text code>type: "selection" | "expand"</n-text>的列外，其他列不管展示不展示，最好都写上 <n-text code>key</n-text> 属性
+</n-alert>
+
 | 名称 | 类型 | 默认值 | 说明 | 版本 |
 | --- | --- | --- | --- | --- |
 | sum | `boolean \| (data) => any` | `undefined` | 该列合计方法 | 未完成 |
 | excelWidth | `number` | `undefined` | 设定导出表格列宽 |  |
 | excelHidden | `boolean` | `undefined` | 导出时隐藏该列 |  |
 | excelRender | `boolean \| (row) => any` | `undefined` | 导出时转换该列 (key 优先级低,render 优先级中,excelRender 优先级高,excelRender 为 false 导出 key 原始值) |  |
+| sorter | `{ type: "deep", sort?: (a, b) => a - b }` | `undefined` | 深度排序 |  |
+| show | `boolean` | `undefined` | 默认是否展示 |  |
 
 ### DataTablePlus Slots
 
